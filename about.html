@@ -16,6 +16,66 @@
     -->
     <link href="assets/css/vendor.min.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
+    <style>
+      /* Base styles */
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 15px;
+      }
+    
+      .card {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+      }
+    
+      .card:hover {
+        transform: translateY(-5px);
+      }
+    
+      /* Typography */
+      .card h2 {
+        font-size: clamp(24px, 4vw, 28px);
+        color: #2c3e50;
+        border-bottom: 3px solid #007bff;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+    
+      .card h3 {
+        font-size: clamp(20px, 3vw, 22px);
+      }
+    
+      .card h4 {
+        font-size: clamp(18px, 2.5vw, 20px);
+      }
+    
+      .card p {
+        font-size: clamp(14px, 2vw, 16px);
+        line-height: 1.8;
+      }
+    
+      /* Responsive Grid */
+      @media (max-width: 768px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .card {
+          padding: 20px;
+        }
+        
+        .coverage-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="preloader">
@@ -124,12 +184,12 @@
       About #4 Section
       ============================
       -->
-      <section class="about about-4" id="about-4" style="padding: 80px 0; background: #f8f9fa;">
+      <section class="about about-4" id="about-4" style="padding: 40px 0; background: #f8f9fa;">
         <div class="container">
-          <div class="row" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin: 0;">
+          <div class="about-grid">
             
             <!-- Company Overview -->
-            <div id="company-overview" style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div id="company-overview" class="card">
               <h2 style="font-size: 28px; color: #2c3e50; border-bottom: 3px solid #007bff; padding-bottom: 10px;">Company Overview</h2>
               <p style="font-size: 16px; line-height: 1.8; color: #555;">RTA3006 Investment Limited, incorporated in 2019, has rapidly emerged as a leading logistics operator in West Africa. Our expertise in shipping, transportation, and cross-border operations has established us as a trusted name in the logistics industry.</p>
               <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px;">
@@ -141,7 +201,7 @@
             </div>
   
             <!-- Leadership Team -->
-            <div id="leadership" style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div id="leadership" class="card">
               <h2 style="font-size: 28px; color: #2c3e50; border-bottom: 3px solid #28a745; padding-bottom: 10px;">Leadership Team</h2>
               
               <!-- CEO -->
@@ -202,7 +262,7 @@
             </div>
   
             <!-- Capabilities -->
-            <div id="capabilities" style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div id="capabilities" class="card">
               <h2 style="font-size: 28px; color: #2c3e50; border-bottom: 3px solid #ffc107; padding-bottom: 10px;">Our Capabilities</h2>
               
               <!-- Transportation Fleet -->
@@ -229,53 +289,50 @@
               </div>
   
               <!-- Coverage Areas -->
-              <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                <h4 style="color: #ffc107; font-size: 20px; margin-bottom: 15px;">Coverage Areas</h4>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                  <div>
-                    <p style="font-weight: bold; color: #2c3e50; margin-bottom: 10px;">National:</p>
-                    <ul style="list-style: none; padding: 0;">
-                      <li style="margin-bottom: 8px; display: flex; align-items: center;">
-                        <span style="color: #ffc107; margin-right: 10px;">▪</span>
-                        Southwest Nigeria
-                      </li>
-                      <li style="margin-bottom: 8px; display: flex; align-items: center;">
-                        <span style="color: #ffc107; margin-right: 10px;">▪</span>
-                        Edo and Delta states
-                      </li>
-                      <li style="margin-bottom: 8px; display: flex; align-items: center;">
-                        <span style="color: #ffc107; margin-right: 10px;">▪</span>
-                        Planned expansion to other regions
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p style="font-weight: bold; color: #2c3e50; margin-bottom: 10px;">International:</p>
-                    <ul style="list-style: none; padding: 0;">
-                      <li style="margin-bottom: 8px; display: flex; align-items: center;">
-                        <span style="color: #ffc107; margin-right: 10px;">▪</span>
-                        Ghana (Tema/Accra)
-                      </li>
-                      <li style="margin-bottom: 8px; display: flex; align-items: center;">
-                        <span style="color: #ffc107; margin-right: 10px;">▪</span>
-                        Côte d'Ivoire (Abidjan)
-                      </li>
-                      <li style="margin-bottom: 8px; display: flex; align-items: center;">
-                        <span style="color: #ffc107; margin-right: 10px;">▪</span>
-                        Togo (Lome)
-                      </li>
-                      <li style="margin-bottom: 8px; display: flex; align-items: center;">
-                        <span style="color: #ffc107; margin-right: 10px;">▪</span>
-                        Benin Republic (Cotonou)
-                      </li>
-                    </ul>
-                  </div>
+              <div class="coverage-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div>
+                  <p style="font-weight: bold; color: #2c3e50; margin-bottom: 10px;">National:</p>
+                  <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px; display: flex; align-items: center;">
+                      <span style="color: #ffc107; margin-right: 10px;">▪</span>
+                      Southwest Nigeria
+                    </li>
+                    <li style="margin-bottom: 8px; display: flex; align-items: center;">
+                      <span style="color: #ffc107; margin-right: 10px;">▪</span>
+                      Edo and Delta states
+                    </li>
+                    <li style="margin-bottom: 8px; display: flex; align-items: center;">
+                      <span style="color: #ffc107; margin-right: 10px;">▪</span>
+                      Planned expansion to other regions
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p style="font-weight: bold; color: #2c3e50; margin-bottom: 10px;">International:</p>
+                  <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px; display: flex; align-items: center;">
+                      <span style="color: #ffc107; margin-right: 10px;">▪</span>
+                      Ghana (Tema/Accra)
+                    </li>
+                    <li style="margin-bottom: 8px; display: flex; align-items: center;">
+                      <span style="color: #ffc107; margin-right: 10px;">▪</span>
+                      Côte d'Ivoire (Abidjan)
+                    </li>
+                    <li style="margin-bottom: 8px; display: flex; align-items: center;">
+                      <span style="color: #ffc107; margin-right: 10px;">▪</span>
+                      Togo (Lome)
+                    </li>
+                    <li style="margin-bottom: 8px; display: flex; align-items: center;">
+                      <span style="color: #ffc107; margin-right: 10px;">▪</span>
+                      Benin Republic (Cotonou)
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
   
             <!-- Services -->
-            <div id="services" style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div id="services" class="card">
               <h2 style="font-size: 28px; color: #2c3e50; border-bottom: 3px solid #dc3545; padding-bottom: 10px;">Detailed Services</h2>
               
               <!-- International Freight Services -->
@@ -304,7 +361,7 @@
             </div>
   
             <!-- Quality Commitment Section -->
-            <div id="quality" style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div id="quality" class="card">
               <h2 style="font-size: 32px; color: #2c3e50; margin-bottom: 30px; border-bottom: 3px solid #007bff; padding-bottom: 10px;">Quality Commitment</h2>
               <p style="font-size: 16px; color: #555; margin-bottom: 20px;">At RTA3006, we maintain the highest standards of service delivery through:</p>
               <ul style="list-style: none; padding: 0;">
